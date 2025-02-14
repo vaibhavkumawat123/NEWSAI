@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { Button } from '@mantine/core';
+
 function Navbar() {
   return (
     <nav className="h-16 p-4">
-      <div className=" flex mx-6 items-center justify-between ">
+      <div className=" flex mx-6 items-center justify-between">
         <motion.h1
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -27,14 +28,13 @@ function Navbar() {
             </motion.li>
           ))}
         </ul>
-
-        <div>
-          <button>Login</button>
+        <div className='flex gap-4'>
+          <Link to='/login' ><button>Login</button></Link>
+          
           <button>Register</button>
         </div>
       </div>
     </nav>
   );
 }
-
 export default Navbar;
